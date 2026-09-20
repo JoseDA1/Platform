@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Menu",
   "gdVersion": {
     "build": 282,
     "major": 5,
@@ -110,7 +110,7 @@
       {
         "file": "assets/Background.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/Background.png\",\"extension\":\".png\",\"pskl\":{}}",
         "name": "assets\\Background.png",
         "smoothed": true,
         "userAdded": false
@@ -1338,6 +1338,51 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Nosifer-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Open Font License/1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/NewTiledSprite8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite8",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "sounds/063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "sounds/063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite9.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite9",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewTiledSprite10.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite10",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -1355,23 +1400,36 @@
     },
     {
       "name": "bones",
+      "persistentUuid": "f0e50483-2ed7-4628-ae1e-424f2a9774cd",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "tutorialButtons",
+      "persistentUuid": "4c64a4ea-8069-4ad6-9718-f08beae55048",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "endGame",
+      "persistentUuid": "6bb77022-2487-4e9d-848e-0d336e257c9f",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
     {
-      "b": 144,
+      "b": 116,
       "disableInputWhenNotFocused": true,
       "mangledName": "Game_32Scene",
       "name": "Game Scene",
-      "r": 150,
+      "r": 173,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 144,
+      "v": 141,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -1381,13 +1439,34 @@
         "gridOffsetZ": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
-        "zoomFactor": 0.22216073482314963,
+        "snap": false,
+        "zoomFactor": 0.2296520681322561,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Ti_tutorial2",
+          "objects": [
+            {
+              "name": "Te_D"
+            },
+            {
+              "name": "Te_A"
+            },
+            {
+              "name": "Te_Q"
+            },
+            {
+              "name": "Te_K"
+            },
+            {
+              "name": "Ti_key"
+            }
+          ]
+        }
+      ],
       "variables": [
         {
           "name": "CoinPitch",
@@ -1417,23 +1496,6 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Ti_Stone",
-          "persistentUuid": "3087be3e-5a9a-49aa-99d6-253985e3479d",
-          "width": 2529,
-          "x": -311,
-          "y": 926,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "depth": 0,
           "height": 132,
           "keepRatio": true,
@@ -1441,7 +1503,7 @@
           "name": "Sp_jugador",
           "persistentUuid": "e1e4297e-fa16-43bf-b1b9-be3c23a79422",
           "width": 192,
-          "x": 32,
+          "x": 3,
           "y": 412,
           "zOrder": 26,
           "numberProperties": [],
@@ -1503,13 +1565,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 170,
+          "height": 317,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_sprite_ground",
           "persistentUuid": "24883e2a-2194-4f35-b245-31b5598f9c43",
-          "width": 2133,
-          "x": -756,
+          "width": 2418,
+          "x": -1041,
           "y": 547,
           "zOrder": 104,
           "numberProperties": [],
@@ -1526,8 +1588,8 @@
           "name": "Ti_blocker",
           "opacity": 102,
           "persistentUuid": "95cdfacb-592a-4d81-8347-1d10d7925f07",
-          "width": 64,
-          "x": -751,
+          "width": 346,
+          "x": -1033,
           "y": -1208,
           "zOrder": 105,
           "numberProperties": [],
@@ -1543,8 +1605,8 @@
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "b6f1d852-41b5-47b1-988b-72abfeeb1a02",
-          "width": 64,
-          "x": 741,
+          "width": 101,
+          "x": 704,
           "y": -1056,
           "zOrder": 106,
           "numberProperties": [],
@@ -1640,7 +1702,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 621,
+          "height": 767,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_sprite_ground",
@@ -1724,7 +1786,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 64,
+          "height": 211,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -1969,15 +2031,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 29,
           "keepRatio": true,
           "layer": "",
           "name": "Te_quest",
           "persistentUuid": "14996bad-c9be-45c6-ae61-4b017f58bb2d",
-          "width": 0,
-          "x": 2752,
-          "y": -61,
+          "width": 224,
+          "x": 2742,
+          "y": -95,
           "zOrder": 126,
           "numberProperties": [],
           "stringProperties": [],
@@ -2019,7 +2082,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 624,
+          "height": 800,
           "layer": "",
           "name": "Ti_sprite_ground",
           "persistentUuid": "1d047db1-a9eb-4a3b-a4b0-d6506d429858",
@@ -2035,7 +2098,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 736,
+          "height": 913,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_sprite_ground",
@@ -2052,7 +2115,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 81,
+          "height": 913,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2069,7 +2132,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 207,
+          "height": 1039,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2086,7 +2149,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 928,
+          "height": 1152,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2289,7 +2352,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 448,
+          "height": 672,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2306,7 +2369,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 64,
+          "height": 288,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2323,7 +2386,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 64,
+          "height": 128,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2414,7 +2477,7 @@
           "name": "Sp_skeleton",
           "persistentUuid": "a76a769a-0506-44c0-b695-ddcafc61466a",
           "width": 192,
-          "x": 1792,
+          "x": 1728,
           "y": -576,
           "zOrder": 27,
           "numberProperties": [],
@@ -2431,7 +2494,7 @@
           "name": "Sp_skeleton",
           "persistentUuid": "a5cfd9f8-1581-495e-ac5b-a34a739c3d30",
           "width": 192,
-          "x": 1120,
+          "x": 1184,
           "y": -576,
           "zOrder": 27,
           "numberProperties": [],
@@ -2464,8 +2527,8 @@
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "5463a680-8d05-47d3-a4b8-b9104fc183f2",
-          "width": 736,
-          "x": 736,
+          "width": 768,
+          "x": 704,
           "y": -1832,
           "zOrder": 106,
           "numberProperties": [],
@@ -2476,14 +2539,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 384,
+          "height": 416,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "fab0fbb8-d5d9-49c1-83a8-53b11ceb098c",
-          "width": 864,
-          "x": 1472,
-          "y": -1824,
+          "width": 896,
+          "x": 1440,
+          "y": -1856,
           "zOrder": 109,
           "numberProperties": [],
           "stringProperties": [],
@@ -2547,7 +2610,7 @@
           "name": "Sp_skeleton",
           "persistentUuid": "fcf17a3e-7ece-4be3-9d26-2171349f2f00",
           "width": 192,
-          "x": 2144,
+          "x": 1888,
           "y": -1184,
           "zOrder": 27,
           "numberProperties": [],
@@ -2558,7 +2621,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 64,
+          "height": 672,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
@@ -2609,14 +2672,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 2240,
+          "height": 3264,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "4c7e162b-e57f-4f65-a3d8-1c7a742e4057",
-          "width": 64,
+          "width": 480,
           "x": 4704,
-          "y": -1952,
+          "y": -2368,
           "zOrder": 134,
           "numberProperties": [],
           "stringProperties": [],
@@ -2828,14 +2891,13 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
+          "depth": 0.5,
+          "height": 16,
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "644058c4-d608-40ef-bc70-f6c61ab1f71f",
           "width": 32,
-          "x": 3104,
+          "x": 3072,
           "y": -1056,
           "zOrder": 134,
           "numberProperties": [],
@@ -2869,7 +2931,7 @@
           "name": "Ti_background",
           "persistentUuid": "55871d74-59c4-4450-ab19-4526b14c3b01",
           "width": 64,
-          "x": 3232,
+          "x": 3200,
           "y": -1184,
           "zOrder": 134,
           "numberProperties": [],
@@ -3050,15 +3112,398 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 192,
+          "height": 544,
           "keepRatio": true,
           "layer": "",
           "name": "Ti_background",
           "persistentUuid": "da0c286d-3746-453d-a289-aebdffd97719",
-          "width": 96,
-          "x": 2240,
-          "y": -2016,
+          "width": 864,
+          "x": 1472,
+          "y": -2368,
           "zOrder": 134,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 416,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_background",
+          "persistentUuid": "046b40bd-09d0-4f06-bd0e-1d9b8dc69d82",
+          "width": 2464,
+          "x": 2304,
+          "y": -2368,
+          "zOrder": 134,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_A",
+          "persistentUuid": "b043ebe8-63ea-4648-8a4f-9cdd020e3e9b",
+          "width": 0,
+          "x": 234,
+          "y": 198,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1824,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_background",
+          "persistentUuid": "c6ba5de8-14ac-4509-9480-0aff03fdee52",
+          "width": 736,
+          "x": 0,
+          "y": -1824,
+          "zOrder": 144,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_key",
+          "persistentUuid": "860a6222-6647-4113-b72f-c4b39585c6e2",
+          "width": 64,
+          "x": 224,
+          "y": 192,
+          "zOrder": 145,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_D",
+          "persistentUuid": "baaf39ea-3389-401f-8694-2dfd05144262",
+          "width": 0,
+          "x": 264,
+          "y": 198,
+          "zOrder": 1001,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_key",
+          "persistentUuid": "d94fe102-7860-4369-af93-efde5f66c0ce",
+          "width": 32,
+          "x": 416,
+          "y": 192,
+          "zOrder": 1002,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_Q",
+          "persistentUuid": "9304d87c-db4b-42b0-8c72-2d046602e7fa",
+          "width": 0,
+          "x": 424,
+          "y": 197,
+          "zOrder": 1003,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_key",
+          "persistentUuid": "9f3dd118-d2a0-43c5-aa52-c5e5acf76637",
+          "width": 32,
+          "x": 480,
+          "y": 192,
+          "zOrder": 1002,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_K",
+          "persistentUuid": "ca24e5c7-935e-4bf7-ba9c-2bae86e29b83",
+          "width": 0,
+          "x": 489,
+          "y": 197,
+          "zOrder": 1004,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 160,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "7138c8f6-80ff-443c-93e1-ccdf473970e6",
+          "width": 32,
+          "x": 3520,
+          "y": -1408,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 352,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "c69972b2-21f2-4b83-ab40-15f1e0bd4754",
+          "width": 32,
+          "x": 3072,
+          "y": -1408,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 128,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "eb5636d0-77bb-4665-837d-e93cc771d2d3",
+          "width": 32,
+          "x": 4064,
+          "y": -1376,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 128,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "8a8e67c6-ed39-41c0-8188-4b69938bad3d",
+          "width": 32,
+          "x": 3840,
+          "y": -1376,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 544,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "bcdc97da-1447-4444-b427-91d2a4e25816",
+          "width": 32,
+          "x": 3968,
+          "y": -1952,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 704,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "5d706b98-d7c1-464c-a1b4-452c807025a9",
+          "width": 32,
+          "x": 4256,
+          "y": -1952,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 768,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "8a131331-7140-4da0-8393-78e7e5b8e97e",
+          "width": 32,
+          "x": 3680,
+          "y": -1408,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 480,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "bfcfe50e-68e6-4915-9c98-40a993b01e1f",
+          "width": 32,
+          "x": 1056,
+          "y": -384,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 640,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "4de757ec-7ad0-4dfd-aae1-0d4190591bc3",
+          "width": 32,
+          "x": 1824,
+          "y": -384,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 576,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_chanes",
+          "persistentUuid": "a9944378-49d7-4e23-b18f-407bbdb01534",
+          "width": 32,
+          "x": 1952,
+          "y": -384,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "3f826f7b-26c8-45c9-b102-f1df9e4383e2",
+          "width": 0,
+          "x": 1696,
+          "y": 591,
+          "zOrder": 1006,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "a7da81f2-af9c-4b4c-bae1-ab32f10795a1",
+          "width": 0,
+          "x": 1344,
+          "y": 32,
+          "zOrder": 1006,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "13a03ed6-1e01-48e8-aa9f-f1c6a5dd16ff",
+          "width": 0,
+          "x": 3840,
+          "y": -320,
+          "zOrder": 1007,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "7d79bb6b-4e7b-4bd8-b0a9-55723448c560",
+          "width": 0,
+          "x": 3072,
+          "y": -992,
+          "zOrder": 1007,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3070,12 +3515,45 @@
           "height": 64,
           "keepRatio": true,
           "layer": "",
-          "name": "Ti_background",
-          "persistentUuid": "046b40bd-09d0-4f06-bd0e-1d9b8dc69d82",
-          "width": 2432,
-          "x": 2336,
-          "y": -2016,
-          "zOrder": 134,
+          "name": "Ti_spiderweb",
+          "persistentUuid": "7767364b-44c2-4c6d-b874-b559bebb9a16",
+          "width": 128,
+          "x": 2304,
+          "y": -1440,
+          "zOrder": 1007,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "dd40cd53-a4b5-4c8d-85dd-9321108fef1d",
+          "width": 0,
+          "x": 1472,
+          "y": -1440,
+          "zOrder": 1007,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_spiderweb",
+          "persistentUuid": "908c9dbb-c3b2-445a-9f73-734cb28f5aad",
+          "width": 128,
+          "x": 1472,
+          "y": -512,
+          "zOrder": 1007,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3093,197 +3571,6 @@
           "variables": [],
           "effects": [],
           "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "height": 64,
-          "name": "Ti_Platform_Ground",
-          "persistentUuid": "d2816b6a-41bf-463a-b19b-34d9b453be1f",
-          "texture": "assets\\StartingGround.png2",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 64,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": false,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": false,
-          "assetStoreId": "",
-          "name": "Sp_Main_Character",
-          "persistentUuid": "ecc01fe4-9867-4a18-8036-a1f602bdea39",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "PlatformerMultitouchMapper",
-              "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper",
-              "Property": "PlatformerObject",
-              "ControllerIdentifier": 1,
-              "JoystickIdentifier": "Primary",
-              "JumpButton": "A"
-            },
-            {
-              "name": "PlatformerObject",
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
-              "deceleration": 1200,
-              "gravity": 1050,
-              "jumpSpeed": 600,
-              "acceleration": 1000,
-              "canGoDownFromJumpthru": true,
-              "canGrabPlatforms": false,
-              "canGrabWithoutMoving": false,
-              "ignoreDefaultControls": false,
-              "jumpSustainTime": 0.3,
-              "ladderClimbingSpeed": 200,
-              "maxFallingSpeed": 800,
-              "maxSpeed": 400,
-              "slopeMaxAngle": 60,
-              "useLegacyTrajectory": false,
-              "xGrabTolerance": 10,
-              "yGrabOffset": 0
-            },
-            {
-              "name": "SmoothCamera",
-              "type": "SmoothCamera::SmoothCamera",
-              "LeftwardSpeed": 0.9,
-              "RightwardSpeed": 0.9,
-              "UpwardSpeed": 0.95,
-              "DownwardSpeed": 0.95,
-              "FollowOnX": true,
-              "FollowOnY": true,
-              "FollowFreeAreaLeft": 0,
-              "FollowFreeAreaRight": 0,
-              "FollowFreeAreaTop": 0,
-              "FollowFreeAreaBottom": 0,
-              "CameraOffsetX": 0,
-              "CameraOffsetY": 0,
-              "CameraDelay": 0,
-              "ForecastTime": 0,
-              "ForecastHistoryDuration": 0,
-              "LogLeftwardSpeed": 2.0247e-320,
-              "LogRightwardSpeed": 2.0247e-320,
-              "LogDownwardSpeed": 2.0247e-320,
-              "LogUpwardSpeed": 2.0247e-320,
-              "DelayedCenterX": 2.0247e-320,
-              "DelayedCenterY": 2.0247e-320,
-              "ForecastHistoryMeanX": 2.0247e-320,
-              "ForecastHistoryMeanY": 2.0247e-320,
-              "ForecastHistoryVarianceX": 2.0247e-320,
-              "ForecastHistoryCovariance": 2.0247e-320,
-              "ForecastHistoryLinearA": 2.0247e-320,
-              "ForecastHistoryLinearB": 2.0247e-320,
-              "ForecastedX": 2.0247e-320,
-              "ForecastedY": 2.0247e-320,
-              "ProjectedNewestX": 2.0247e-320,
-              "ProjectedNewestY": 2.0247e-320,
-              "ProjectedOldestX": 2.0247e-320,
-              "ProjectedOldestY": 2.0247e-320,
-              "ForecastHistoryVarianceY": 2.0247e-320,
-              "Index": 2.0247e-320,
-              "CameraDelayCatchUpSpeed": 0,
-              "CameraExtraDelay": 2.0247e-320,
-              "WaitingSpeedXMax": 2.0247e-320,
-              "WaitingSpeedYMax": 2.0247e-320,
-              "WaitingEnd": 2.0247e-320,
-              "CameraDelayCatchUpDuration": 2.0247e-320,
-              "LeftwardSpeedMax": 9000,
-              "RightwardSpeedMax": 9000,
-              "UpwardSpeedMax": 9000,
-              "DownwardSpeedMax": 9000,
-              "OldX": 9000.000000007454,
-              "OldY": 9000.000000007454,
-              "IsCalledManually": false
-            }
-          ],
-          "animations": [
-            {
-              "name": "Pla",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 12,
-                            "y": 99.5
-                          },
-                          {
-                            "x": 7.5,
-                            "y": 38
-                          },
-                          {
-                            "x": 16,
-                            "y": 17.5
-                          },
-                          {
-                            "x": 27,
-                            "y": 6
-                          },
-                          {
-                            "x": 53.5,
-                            "y": 4
-                          },
-                          {
-                            "x": 81,
-                            "y": 13.5
-                          },
-                          {
-                            "x": 89.5,
-                            "y": 35
-                          },
-                          {
-                            "x": 81.5,
-                            "y": 67
-                          },
-                          {
-                            "x": 85.5,
-                            "y": 96.5
-                          },
-                          {
-                            "x": 66.5,
-                            "y": 115.5
-                          },
-                          {
-                            "x": 27.5,
-                            "y": 114.5
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -3348,238 +3635,6 @@
           ]
         },
         {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "NewTiledSprite",
-          "persistentUuid": "f73e46e8-0be5-4cd0-96a8-1434146b1384",
-          "texture": "",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "NewTiledSprite2",
-          "persistentUuid": "ced566ab-8767-4617-b6ec-de296de7aea9",
-          "texture": "",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "height": 64,
-          "name": "Ti_Lava",
-          "persistentUuid": "301dcadf-77a8-4b87-8134-916d06a272a2",
-          "texture": "NewTiledSprite3",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 64,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Sp_Static_Character",
-          "persistentUuid": "6cf60ac1-3c19-40ad-8991-945353c9c5be",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "static_character",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "static_character",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 23,
-                            "y": 9
-                          },
-                          {
-                            "x": 98,
-                            "y": 9
-                          },
-                          {
-                            "x": 98,
-                            "y": 116
-                          },
-                          {
-                            "x": 23,
-                            "y": 116
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "height": 64,
-          "name": "Ti_Ground",
-          "persistentUuid": "5d876539-8695-434d-8022-2be5e2694673",
-          "texture": "NewTiledSprite4",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 64,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": false,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "height": 64,
-          "name": "Ti_Wood",
-          "persistentUuid": "77518935-12a4-4faf-b339-adcbb6a00887",
-          "texture": "wooden.jpg",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 64,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": false,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "height": 64,
-          "name": "Ti_Stone",
-          "persistentUuid": "c71db318-1249-4a8d-b557-9eca12343eae",
-          "texture": "NewTiledSprite5",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 64,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": false,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Sp_Jumping",
-          "persistentUuid": "dfe683c6-0c1a-4520-99ca-3c51bd87b439",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite4",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 44,
-                            "y": 0
-                          },
-                          {
-                            "x": 44,
-                            "y": 43
-                          },
-                          {
-                            "x": 0,
-                            "y": 43
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "NewTiledSprite3",
-          "persistentUuid": "980897ad-1788-4f4f-b302-f9e83d7a9903",
-          "texture": "",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Sp_jugador",
@@ -3605,13 +3660,13 @@
             {
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "ignoreDefaultControls": true,
               "gravity": 1020,
               "acceleration": 1500,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
               "canGrabWithoutMoving": true,
               "deceleration": 1500,
-              "ignoreDefaultControls": false,
               "jumpSpeed": 600,
               "jumpSustainTime": 0.2,
               "ladderClimbingSpeed": 150,
@@ -9883,18 +9938,6 @@
         },
         {
           "assetStoreId": "",
-          "height": 32,
-          "name": "NewTiledSprite4",
-          "persistentUuid": "4851f87a-c3ce-42d0-85ad-5faf09c7e389",
-          "texture": "",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
           "bold": false,
           "italic": false,
           "name": "Te_quest",
@@ -9905,9 +9948,9 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": ".",
+          "string": "Q",
           "font": "8c4544654743d56682bd6d16e092a9a29da45d2a6b35e810d9d3b73217492df9_OpenSans-Italic-VariableFont_wdth,wght.ttf",
-          "textAlignment": "left",
+          "textAlignment": "center",
           "characterSize": 20,
           "color": {
             "b": 0,
@@ -9928,26 +9971,14 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": ".",
+            "text": "Q",
             "font": "8c4544654743d56682bd6d16e092a9a29da45d2a6b35e810d9d3b73217492df9_OpenSans-Italic-VariableFont_wdth,wght.ttf",
-            "textAlignment": "left",
+            "textAlignment": "center",
             "verticalTextAlignment": "top",
             "characterSize": 20,
             "lineHeight": 0,
             "color": "0;0;0"
           }
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "NewTiledSprite5",
-          "persistentUuid": "9ad70f98-0b5a-4e26-8854-b7c8051f8970",
-          "texture": "",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
         },
         {
           "assetStoreId": "",
@@ -10074,14 +10105,287 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_A",
+          "persistentUuid": "a58f68fe-b745-4c5e-b979-60912dda51ff",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "A",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "A",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "height": 64,
+          "name": "Ti_key",
+          "persistentUuid": "22d0c81a-ddfa-4269-be25-dfb9f4ebeb3d",
+          "texture": "NewTiledSprite8",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 64,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_D",
+          "persistentUuid": "ad5d84b1-7c0c-493e-b1bb-c6ad495be158",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "D",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "D",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_Q",
+          "persistentUuid": "7b44998a-759a-49ff-9b8c-bb8271b2fd14",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Q",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Q",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_K",
+          "persistentUuid": "5fefc3bd-123e-4420-bd10-1eb37517c978",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "K",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 18,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "K",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 18,
+            "lineHeight": 0,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "Ti_chanes",
+          "persistentUuid": "6f94a355-60e7-41ed-8455-cefe29d7f466",
+          "texture": "NewTiledSprite9",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 64,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 64,
+          "name": "Ti_spiderweb",
+          "persistentUuid": "17c2fe6d-3b47-46ce-9e23-c030a1732dc4",
+          "texture": "NewTiledSprite10",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 64,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
+            "folderName": "Sp",
+            "children": [
+              {
+                "objectName": "Sp_Bone"
+              },
+              {
+                "objectName": "Sp_jugador"
+              }
+            ]
+          },
+          {
+            "objectName": "Sp_skeleton"
+          },
+          {
+            "objectName": "Sp_quest"
+          },
+          {
+            "folderName": "Text",
+            "children": [
+              {
+                "objectName": "Te_quest"
+              },
+              {
+                "objectName": "Te_bones"
+              },
+              {
+                "objectName": "Te_death"
+              },
+              {
+                "objectName": "Te_A"
+              },
+              {
+                "objectName": "Te_D"
+              },
+              {
+                "objectName": "Te_Q"
+              },
+              {
+                "objectName": "Te_K"
+              }
+            ]
+          },
+          {
             "folderName": "Tiles",
             "children": [
+              {
+                "objectName": "Ti_background"
+              },
+              {
+                "objectName": "Ti_key"
+              },
+              {
+                "objectName": "Ti_spiderweb"
+              },
+              {
+                "objectName": "Ti_lives"
+              },
+              {
+                "objectName": "Ti_chanes"
+              },
+              {
+                "objectName": "Ti_bones"
+              },
               {
                 "objectName": "Ti_sprite_ground"
               },
@@ -10091,76 +10395,7 @@
             ]
           },
           {
-            "objectName": "Sp_Main_Character"
-          },
-          {
-            "objectName": "Ti_Lava"
-          },
-          {
-            "objectName": "NewTiledSprite2"
-          },
-          {
-            "objectName": "Ti_Platform_Ground"
-          },
-          {
-            "objectName": "Ti_Ground"
-          },
-          {
-            "objectName": "Ti_Stone"
-          },
-          {
-            "objectName": "Ti_Wood"
-          },
-          {
             "objectName": "Background"
-          },
-          {
-            "objectName": "Ti_bones"
-          },
-          {
-            "objectName": "Sp_Jumping"
-          },
-          {
-            "objectName": "Sp_Bone"
-          },
-          {
-            "objectName": "NewTiledSprite"
-          },
-          {
-            "objectName": "Sp_Static_Character"
-          },
-          {
-            "objectName": "NewTiledSprite3"
-          },
-          {
-            "objectName": "Sp_jugador"
-          },
-          {
-            "objectName": "Ti_lives"
-          },
-          {
-            "objectName": "Te_bones"
-          },
-          {
-            "objectName": "Te_death"
-          },
-          {
-            "objectName": "Sp_skeleton"
-          },
-          {
-            "objectName": "Sp_quest"
-          },
-          {
-            "objectName": "NewTiledSprite4"
-          },
-          {
-            "objectName": "Te_quest"
-          },
-          {
-            "objectName": "NewTiledSprite5"
-          },
-          {
-            "objectName": "Ti_background"
           }
         ]
       },
@@ -10223,6 +10458,163 @@
                 "rightLimit",
                 "=",
                 "Sp_skeleton.X() + 200"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"Re_tutorial\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicOnChannel"
+              },
+              "parameters": [
+                "",
+                "sounds/063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3",
+                "1",
+                "yes",
+                "50",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Te_quest"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lives",
+                "=",
+                "3"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"Re_tutorial\"",
+                ">=",
+                "10"
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "tutorialButtons",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "tutorialButtons",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Hide"
+                  },
+                  "parameters": [
+                    "Ti_tutorial2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Re_tutorial\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"r\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game Scene\"",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "lives",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "bones",
+                "=",
+                "0"
               ]
             }
           ]
@@ -10299,91 +10691,167 @@
                 "Te_quest",
                 ""
               ]
-            },
+            }
+          ],
+          "events": [
             {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Te_quest",
-                "Text",
-                "=",
-                "\"Hola viajero, necesito tu ayuda\""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "bones",
+                    "=",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Te_quest",
+                    "Text",
+                    "=",
+                    "\"Muchas gracias\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Menu\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "endGame",
+                    "True",
+                    ""
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "3"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Te_quest",
-                "Text",
-                "=",
-                "\"con este sol no podré buscar huesos para recuperarme\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "3"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Te_quest",
-                "Text",
-                "=",
-                "\"puedes traerme 10 huesos?\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "3"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Te_quest",
-                "Text",
-                "=",
-                "\"te lo recompensaré\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Ti_bones",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Show"
-              },
-              "parameters": [
-                "Te_bones",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "bones",
+                    "=",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Te_quest",
+                    "Text",
+                    "=",
+                    "\"Hola viajero, necesito tu ayuda\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Te_quest",
+                    "Text",
+                    "=",
+                    "\"con este sol no podré buscar huesos para recuperarme\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Te_quest",
+                    "Text",
+                    "=",
+                    "\"puedes traerme 10 huesos?\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Te_quest",
+                    "Text",
+                    "=",
+                    "\"te lo recompensaré\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "Ti_bones",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Show"
+                  },
+                  "parameters": [
+                    "Te_bones",
+                    ""
+                  ]
+                }
               ]
             }
           ]
@@ -10498,11 +10966,45 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextJustPressed"
+                "value": "KeyFromTextPressed"
               },
               "parameters": [
                 "",
-                "\"Right\""
+                "\"d\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "Animation",
+                "=",
+                "\"hurt\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "attacking",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "dying",
+                "=",
+                ""
               ]
             }
           ],
@@ -10516,6 +11018,15 @@
                 "Flippable",
                 "no"
               ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateRightKey"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject"
+              ]
             }
           ]
         },
@@ -10524,11 +11035,45 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextJustPressed"
+                "value": "KeyFromTextPressed"
               },
               "parameters": [
                 "",
-                "\"Left\""
+                "\"a\""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "Animation",
+                "=",
+                "\"hurt\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "attacking",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "dying",
+                "=",
+                ""
               ]
             }
           ],
@@ -10541,6 +11086,74 @@
                 "Sp_jugador",
                 "Flippable",
                 "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateLeftKey"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "dying",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "Animation",
+                "=",
+                "\"hurt\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "attacking",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::SimulateJumpKey"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject"
               ]
             }
           ]
@@ -11392,6 +12005,91 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "Ti_spiderweb",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxSpeed"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject",
+                "=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxFallingSpeed"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject",
+                "=",
+                "100",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "Ti_spiderweb",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxSpeed"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject",
+                "=",
+                "250"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxFallingSpeed"
+              },
+              "parameters": [
+                "Sp_jugador",
+                "PlatformerObject",
+                "=",
+                "700",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -11512,55 +12210,6 @@
                 "",
                 "100",
                 "1"
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
-              },
-              "parameters": [
-                "Sp_jugador",
-                "Animation"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::Name"
-              },
-              "parameters": [
-                "Sp_jugador",
-                "Animation",
-                "=",
-                "\"hurt\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlatformBehavior::IgnoreDefaultControls"
-              },
-              "parameters": [
-                "Sp_jugador",
-                "PlatformerObject",
-                "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "Sp_jugador",
-                "Animation",
-                "=",
-                "\"idle\""
               ]
             }
           ]
@@ -11844,6 +12493,899 @@
         {
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 31,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Menu",
+      "name": "Menu",
+      "r": 51,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 38,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.7876290101673753,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [
+        {
+          "name": "gru_skeleton",
+          "objects": [
+            {
+              "name": "Sp_quest"
+            },
+            {
+              "name": "Te_thank"
+            }
+          ]
+        }
+      ],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_title",
+          "persistentUuid": "de8ab035-cbcc-4661-8afd-569e2ede3357",
+          "width": 0,
+          "x": 485,
+          "y": 198,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_info",
+          "persistentUuid": "b4b68961-6534-45d6-9864-2db33157c864",
+          "width": 0,
+          "x": 325,
+          "y": 307,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Ti_enter",
+          "persistentUuid": "9761ddf1-628a-4f6f-afe1-258b6d31d29d",
+          "width": 0,
+          "x": 520,
+          "y": 466,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "flippedX": true,
+          "height": 121.33333333333333,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Sp_quest",
+          "persistentUuid": "cb38eb11-58a4-475a-b7d0-410b8c330d9e",
+          "width": 182,
+          "x": 1051,
+          "y": 587,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 99,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_thank",
+          "persistentUuid": "23804abe-df57-400d-b9e1-7c4dfeb3dee7",
+          "width": 164,
+          "x": 1064,
+          "y": 510,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Te_version",
+          "persistentUuid": "fb1eb790-0e1b-4056-bc81-a631fe8b2c0e",
+          "width": 0,
+          "x": 16,
+          "y": 685,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Ti_title",
+          "persistentUuid": "8d44bbef-0c7c-4bd5-a65b-923c96bfa236",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Title",
+          "font": "1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Title",
+            "font": "1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Ti_info",
+          "persistentUuid": "8b61149c-7295-458b-b98a-2d008b21bc6d",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Desarrollo de Videojuegos — 193607\nJose David Angarita - 0192322\n23 / 09 / 26",
+          "font": "1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 212,
+            "g": 212,
+            "r": 212
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Desarrollo de Videojuegos — 193607\nJose David Angarita - 0192322\n23 / 09 / 26",
+            "font": "1629c2a4e484eaa68d5a0072488006012b72c539d11429b015f7382e7ecfd633_Nosifer-Regular.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "lineHeight": 0,
+            "color": "212;212;212"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": true,
+          "name": "Ti_enter",
+          "persistentUuid": "56a5fb3b-6d48-47ab-ae95-46f197117225",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Espacio para jugar",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 22,
+          "color": {
+            "b": 160,
+            "g": 160,
+            "r": 160
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": true,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Espacio para jugar",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 22,
+            "lineHeight": 0,
+            "color": "160;160;160"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Sp_quest",
+          "persistentUuid": "31bb14f1-d4e3-4893-89f1-3bad3ebf3d31",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle9",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle10",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle11",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle12",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle13",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle14",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle15",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle16",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 34,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 18
+                          },
+                          {
+                            "x": 68,
+                            "y": 64
+                          },
+                          {
+                            "x": 34,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_thank",
+          "persistentUuid": "da846749-3c21-4b66-9a4a-cd0918f811cd",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Nos vemos la proxima",
+          "font": "8c4544654743d56682bd6d16e092a9a29da45d2a6b35e810d9d3b73217492df9_OpenSans-Italic-VariableFont_wdth,wght.ttf",
+          "textAlignment": "left",
+          "characterSize": 32,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Nos vemos la proxima",
+            "font": "8c4544654743d56682bd6d16e092a9a29da45d2a6b35e810d9d3b73217492df9_OpenSans-Italic-VariableFont_wdth,wght.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 32,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Te_version",
+          "persistentUuid": "eaec07b3-b1a2-4dc3-9814-abcb4b293a7a",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "1.0",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "1.0",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "lineHeight": 0,
+            "color": "255;255;255"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Ti_title"
+          },
+          {
+            "objectName": "Ti_info"
+          },
+          {
+            "objectName": "Ti_enter"
+          },
+          {
+            "objectName": "Sp_quest"
+          },
+          {
+            "objectName": "Te_thank"
+          },
+          {
+            "objectName": "Te_version"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneJustBegins"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Sp_quest"
+              ]
+            },
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Te_thank"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextJustPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Game Scene\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "endGame",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "Sp_quest",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Show"
+              },
+              "parameters": [
+                "Te_thank",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
         },
         {
           "name": "Text",
