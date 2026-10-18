@@ -3681,6 +3681,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite139.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite139",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -25825,7 +25833,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2386775827025788,
+        "zoomFactor": 1.0973679695629537,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -26188,6 +26196,7 @@
           "customSize": true,
           "depth": 0,
           "height": 32,
+          "hidden": true,
           "keepRatio": true,
           "layer": "",
           "name": "Sp_spawnDark",
@@ -26248,6 +26257,41 @@
           "x": 1152,
           "y": 32,
           "zOrder": 1004,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Sp_start",
+          "persistentUuid": "1dc8d282-bbc5-4075-9936-dbdaafbd3fa3",
+          "width": 32,
+          "x": 7294,
+          "y": 101,
+          "zOrder": 1005,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 151,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Sp_puerta",
+          "opacity": 0,
+          "persistentUuid": "2dc24358-d4c3-4011-a092-3ce7bdf9b254",
+          "width": 64,
+          "x": 6884,
+          "y": 110,
+          "zOrder": 1006,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -30002,6 +30046,76 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Sp_puerta",
+          "persistentUuid": "389a4f3f-e067-4d69-9572-f04f120453dd",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": true,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite139",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -30021,6 +30135,9 @@
           },
           {
             "objectName": "Sp_start"
+          },
+          {
+            "objectName": "Sp_puerta"
           }
         ]
       },
@@ -31996,17 +32113,6 @@
                 "",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "SceneInstancesCount"
-              },
-              "parameters": [
-                "",
-                "Sp_dark",
-                "=",
-                "0"
-              ]
             }
           ],
           "actions": [
@@ -32018,56 +32124,6 @@
                 "",
                 "\"Menu\"",
                 ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Sp_start",
-                "7272",
-                "52",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "Sp_start",
-                "Opacity",
-                "=",
-                "50"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResizableCapability::ResizableBehavior::SetSize"
-              },
-              "parameters": [
-                "Sp_start",
-                "Resizable",
-                "64",
-                "64"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetZOrder"
-              },
-              "parameters": [
-                "Sp_start",
-                "=",
-                "2"
               ]
             }
           ]
@@ -32090,13 +32146,11 @@
           "actions": [
             {
               "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                "value": "Delete"
               },
               "parameters": [
-                "Sp_start",
-                "Opacity",
-                "=",
-                "255"
+                "Sp_puerta",
+                ""
               ]
             }
           ]
